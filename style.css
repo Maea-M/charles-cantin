@@ -1,0 +1,98 @@
+/*
+font-family: 'Courgette', cursive;
+font-family: 'Lancelot', cursive;
+font-family: 'Nobile', sans-serif;
+color: #47555E;
+color: #EEEEEE;
+color: #C69C6D;
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #47555E;
+    color: #EEEEEE;
+    font-family: 'Lancelot', cursive;    
+}
+
+.header__logo {
+    width: 8rem;
+    height: 8rem;
+}
+
+.list-links {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+}
+
+.nav-link a {
+    color: #EEEEEE;
+}
+
+.nav-link{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.nav-link::after{
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 0;
+    height: 2px;
+    background: #EEEEEE;
+    transition: width 0.2s ease-in-out;
+}
+
+.nav-link:hover:after{
+    width: 2rem;
+}
+
+.footer {
+    color: #EEEEEE;
+    background-color: #47555E;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/*---------- Specific : Home page ----------*/
+.main {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/photoaccueil.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.main__title {
+    position: absolute;
+    color: #C69C6D;
+    font-family: 'Courgette', cursive;
+    top: 50vw;
+    left: 25%;
+}
