@@ -26,7 +26,6 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-    padding: 2rem;
     background-color: #47555E;
     color: #EEEEEE;
     font-family: 'Lancelot', cursive;    
@@ -96,4 +95,13 @@ body {
 .main__title {
     color: #C69C6D;
     font-family: 'Courgette', cursive;
+}
+
+/*------------ Media Queries -----------*/
+@media (min-width: 992px) {
+    .paint-contact {
+        width: 50vw;
+        height: 30vh;
+        object-fit: cover;
+    }
 }
