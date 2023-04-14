@@ -18,17 +18,23 @@
 </head>
 <body>
     <header class="header">
-        <img class="header__logo" src="assets/logo.png" alt="logo Charles Cantin">
 
-        <nav>
-            <ul class="list-links">
-                <li class="nav-link"><a href="index.html">Accueil</a></li>
-                <li class="nav-link"><a href="galerie.html">Galerie</a></li>
-                <li class="nav-link"><a href="tarifs.html">Tarifs</a></li>
-                <li class="nav-link"><a href="contact.html">Contact</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <img class="header__logo" src="assets/logo.png" alt="logo Charles Cantin">
+            </div> 
+            <ul class="navbar__links">
+                <li class="navbar__link"><a href="index.html">Accueil</a></li>
+                <li class="navbar__link"><a href="galerie.html">Galerie</a></li>
+                <li class="navbar__link"><a href="tarifs.html">Tarifs et Prestations</a></li>
+                <li class="navbar__link"><a href="contact.html">Contactez-moi</a></li>
+            </ul>   
+            <button class="burger">
+                <span class="bar"></span>  
+            </button>   
         </nav>
     </header>
+
     <main>
         <h1>Formulaire de contact</h1>
 
@@ -88,6 +94,7 @@
         
     </footer>
 
+    <script src="menu.js"></script>
 
 </body>
 </html>

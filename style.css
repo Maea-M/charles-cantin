@@ -28,9 +28,6 @@ body {
 }
 
 .header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     gap: 1rem;
     background-color: #47555E;
     color: #EEEEEE;
@@ -41,37 +38,116 @@ body {
     width: 8rem;
     height: 8rem;
 }
+/*----- -----*/
 
-.list-links {
-    display: flex;
-    column-gap: 40px;
-    align-items: center;
-}
+   /* Navbar */
+    .navbar {  
+    display:flex;
+    align-items:center; 
+    justify-content:space-between;   
+    padding:10px;
+    font-size:1.1rem;
+    background:#47555E;
+    color:#EEEEEE;
+    }
 
-.nav-link a {
-    color: #EEEEEE;
-}
+    .navbar__links { 
+    display:flex;  
+    }
+    .navbar__link { 
+    padding:0 10px;
+    }
+    .navbar__link > a { 
+    color:#EEEEEE;
+    }
 
-.nav-link{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 14px;
-}
+    @media screen and (max-width:767.98px) {
+        .navbar__links { 
+            overflow:hidden;
+            display:flex;
+            flex-direction:column;
+            width:0;
+            height:calc(100vh - 65px);  
+            position:absolute;
+            top:95px;
+            left:0;     
+            background:transparent;     
+            transform: translateX(110%);
+            transition: all .5s ease-in-out;
+            z-index: 3;
+        }
+        .show-nav .navbar__links { 
+            
+            width:100vw;    
+            transform: translateX(0);
+        } 
+        .navbar__link {    
+            transform: translateX(101%);
+            transition: all .5s ease-in-out;
+        }
+        
+        .show-nav .navbar__link  {        
+            transform: translateX(0);    
+        }   
+        .navbar__link > a {
+            display:block;
+            padding:1rem;
+            font-size:1.6rem;
+            color:#EEEEEE;  
+            transition: all .4s ease-in-out;
+        }
+        .navbar__link > a:hover {
+            padding-left:2rem;
+            letter-spacing:5px;
+        }
+    }
 
-.nav-link::after{
-    content: "";
-    display: block;
-    margin: 0 auto;
-    margin-top: 5px;
-    width: 0;
-    height: 2px;
-    background: #EEEEEE;
-    transition: width 0.2s ease-in-out;
-}
+    /* Toggle menu */
+    .burger {
+        display:block;
+        position:relative;
+        padding:0;
+        width:45px;
+        height:45px;
+        border:none;
+        background:transparent;
+        cursor:pointer;
 
-.nav-link:hover:after{
-    width: 2rem;
-}
+    }
+    .bar {
+        display:block;    
+        width:45px;
+        height:4px;  
+        border-radius:3px;
+        background:#EEEEEE; 
+        transition: all .5s ease-in-out;   
+    }
+    .bar::before, .bar::after {
+        content:"";
+        width:45px;
+        height:4px;
+        position:absolute; 
+        left:0;  
+        background:#EEEEEE; 
+        border-radius:3px;    
+        transition: all .5s ease-in-out;
+    }
+    .bar::before {
+        transform:translateY(-12px)
+    }
+    .bar::after {
+        transform:translateY(12px)
+    }
+    .show-nav .bar {
+        width:0;
+        background:transparent;    
+    }
+    .show-nav .bar::before {
+        transform:rotate(45deg);
+    }
+    .show-nav .bar::after {
+        transform:rotate(-45deg);
+    }
 
 /* ---------- footer ----------*/
 .footer {
@@ -105,10 +181,55 @@ body {
 }
 
 /*------------ Media Queries -----------*/
-@media (min-width: 992px) {
-    .paint-contact {
-        width: 50vw;
-        height: 30vh;
-        object-fit: cover;
+
+@media screen and (min-width:768px) {
+    .navbar__link > a::after {
+        display:block;
+        content:"";
+        width:0;
+        height:1px;
+        background:var(--navbar-color);
+        transition:width .4s;
     }
+    .navbar__link:hover > a::after {
+        width:100%;
+    }
+    .burger{
+        display: none;
+    }
+
+    
+/*----------- survol des liens----------*/
+.navbar__links {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__link a {
+    color: #EEEEEE;
+    font-size: 1.6rem;
+}
+
+.navbar__link{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.navbar__link::after{
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 0;
+    height: 2px;
+    background: #EEEEEE;
+    transition: width 0.2s ease-in-out;
+}
+
+.navbar__link:hover:after{
+    width: 2rem;
+}
+    
 }
