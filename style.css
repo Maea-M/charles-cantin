@@ -25,6 +25,14 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Nobile', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-family: 'Courgette', cursive;
+    color: #47555E;
+    text-align: center;
+    padding: 20px;
 }
 
 .header {
@@ -61,7 +69,7 @@ body {
     color:#EEEEEE;
     }
 
-    @media screen and (max-width:767.98px) {
+    @media screen and (max-width:767px) {
         .navbar__links { 
             overflow:hidden;
             display:flex;
@@ -154,7 +162,6 @@ body {
     color: #EEEEEE;
     background-color: #47555E;
     width: 100vw;
-    position: fixed;
     bottom: 0;
     left: 0;
 }
@@ -179,6 +186,38 @@ body {
     color: #C69C6D;
     font-family: 'Courgette', cursive;
 }
+/*---------- Specific : Gallery Iamge ---------*/
+.galery__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+.galery__image {
+    max-width: 250px;
+    max-height: auto;
+}
+
+.button__list {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+button {
+    background-color: #EEEEEE;
+    color: #47555E;
+    border: #47555E solid 1px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+button:hover {
+    color: #C69C6D;
+    border: #C69C6D solid 1px;
+}
 
 /*------------ Media Queries -----------*/
 
@@ -188,7 +227,7 @@ body {
         content:"";
         width:0;
         height:1px;
-        background:var(--navbar-color);
+        background:#47555E;
         transition:width .4s;
     }
     .navbar__link:hover > a::after {
@@ -197,39 +236,43 @@ body {
     .burger{
         display: none;
     }
-
     
 /*----------- survol des liens----------*/
-.navbar__links {
-    display: flex;
-    column-gap: 40px;
-    align-items: center;
-    justify-content: space-between;
-}
+    .navbar__links {
+        display: flex;
+        column-gap: 40px;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-.navbar__link a {
-    color: #EEEEEE;
-    font-size: 1.6rem;
-}
+    .navbar__link a {
+        color: #EEEEEE;
+        font-size: 1.6rem;
+    }
 
-.navbar__link{
-    font-weight: 400;
-    font-size: 14px;
-}
+    .navbar__link{
+        font-weight: 400;
+        font-size: 14px;
+    }
 
-.navbar__link::after{
-    content: "";
-    display: block;
-    margin: 0 auto;
-    margin-top: 5px;
-    width: 0;
-    height: 2px;
-    background: #EEEEEE;
-    transition: width 0.2s ease-in-out;
-}
+    .navbar__link::after{
+        content: "";
+        display: block;
+        margin: 0 auto;
+        margin-top: 5px;
+        width: 0;
+        height: 2px;
+        background: #EEEEEE;
+        transition: width 0.2s ease-in-out;
+    }
 
-.navbar__link:hover:after{
-    width: 2rem;
-}
-    
+    .navbar__link:hover:after{
+        width: 2rem;
+    }
+
+    /*------ galery ------*/
+    .galery__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
