@@ -1,11 +1,15 @@
-/*
+/* font 
 font-family: 'Courgette', cursive;
 font-family: 'Lancelot', cursive;
 font-family: 'Nobile', sans-serif;
+
+
 color: #47555E;
 color: #EEEEEE;
 color: #C69C6D;
 */
+
+/*----------- Reset ----------*/
 * {
     margin: 0;
     padding: 0;
@@ -14,11 +18,13 @@ color: #C69C6D;
     list-style-type: none;
 }
 
+/*------------ GLobal----------*/
 body {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Nobile', sans-serif;
 }
 
 .header {
@@ -67,6 +73,7 @@ body {
     width: 2rem;
 }
 
+/* ---------- footer ----------*/
 .footer {
     color: #EEEEEE;
     background-color: #47555E;
