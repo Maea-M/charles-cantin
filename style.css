@@ -219,6 +219,44 @@ button:hover {
     border: #C69C6D solid 1px;
 }
 
+/*------------ Psecifc page conatct--------*/
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.form label {
+    color: #47555E;
+}
+.form input {
+    font-size: 1em;
+    padding: 0.4rem;
+    width: 500px;
+    border-radius: 5px;
+    border: 2px solid #47555E;
+    color: #47555E;
+    margin: 10px;
+}
+
+.form textarea {
+    font-size: 1em;
+    padding: 0.4rem;
+    width: 500px;
+    height: 250px;
+    border-radius: 5px;
+    border: 2px solid #47555E;
+    color: #47555E;
+    margin: 10px;
+}
 /*------------ Media Queries -----------*/
 
 @media screen and (min-width:768px) {
@@ -275,4 +313,5 @@ button:hover {
         flex-direction: row;
         flex-wrap: wrap;
     }
+
 }
