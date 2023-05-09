@@ -164,8 +164,27 @@ h1 {
     width: 100vw;
     bottom: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
+.footer a {
+    color: #EEEEEE;
+}
+.footer a:hover {
+    color: #C69C6D;
+}
+.flux {
+    display: flex;
+    margin: 1% 10%;
+    justify-content: space-between;
+    gap: 10px;
+}
+.copyright {
+    align-self: center;
+}
 /*---------- Specific : Home page ----------*/
 .main {
     display: flex;
@@ -256,6 +275,15 @@ button:hover {
     border: 2px solid #47555E;
     color: #47555E;
     margin: 10px;
+}
+
+.coordonnees {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #47555E;
+    margin-bottom: 2%;
+    gap: 10px;
 }
 /*------------ Media Queries -----------*/
 
