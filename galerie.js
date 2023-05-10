@@ -6,9 +6,13 @@ const onglets = document.querySelectorAll('.category');
 console.log(onglets)
 // récupération d'un tableau de longueur 7
 
-// initialiser un nombre à 0 que l'on va comparer à l'onglet clique via un data
-// car sinon ça ne déascative pas les autres
 
+const images = document.querySelectorAll('.galery__image')
+console.log(images)
+// récupération d'un tableau de valeur 6
+
+// tableau avec tous les noms des images
+const noms = ['tout','mariage', 'bebe', 'grossesse', 'famille', 'couple', 'bapteme'];
 let number = 0;
 onglets.forEach((onglet) => {
     onglet.addEventListener("click",()=>{
@@ -18,27 +22,36 @@ onglets.forEach((onglet) => {
         } else {
             onglet.classList.add("active");
         }
-    number = onglet.getAttribute('data-btn');
-    for (i=0; i< onglets.length; i++){
-        if (onglets[i].getAttribute('data-btn') != number) {
-            onglets[i].classList.remove("active")
-        }
-    }
-    })
-});
 
-const images = document.querySelectorAll('.galery__image')
-console.log(images)
-// récupération d'un tableau de valeur 6
+        // initialiser un nombre à 0 que l'on va comparer à l'onglet clique via un data
+        // car sinon ça ne déascative pas les autres
+        number = onglet.getAttribute('data-btn');
+        for (i=0; i< onglets.length; i++){
+            if (onglets[i].getAttribute('data-btn') != number) {
+                onglets[i].classList.remove("active")
+            }
+        }
+
+    //parcourir la galerie d'images si j vaut le nombre 0 , afficher toutes les iamges
+    // si autre que 0, mettre par catégorie miage...
+            for (j = 0 ; j < noms.length ; j++) {
+                if (j == number) {
+                    images.forEach((image) => {
+                        if (image.classList.contains(noms[j]) || j === 0) {
+                            image.classList.add("active");
+                    } else {
+                            image.classList.remove("active");
+                    }
+                })
+            }
+}
+})
+});
 
 /*
 2. Quand le button est cliqué(addEventListenner), 
 il devient actif, 
 rajouter la galerie correspondante,
 retirer les autres
-tableau imbriqué 1er avec category id à récupérer 
-2ème tableau avec les images
-
-switch case?
-*/
-
+tableau imbriqué 1er
+2ème tableau avec les images*/

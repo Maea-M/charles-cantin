@@ -217,8 +217,12 @@ h1 {
 .galery__image {
     max-width: 250px;
     max-height: auto;
+    display: none;
 }
 
+.active {
+    display: block;
+}
 .button__list {
     display:flex;
     justify-content: center;
