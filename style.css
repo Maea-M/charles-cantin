@@ -22,15 +22,14 @@ color: #C69C6D;
 body {
     width: 100%;
     height: 100vh;
+    position: relative;
     display: flex;
     flex-direction: column;
     font-family: 'Nobile', sans-serif;
     font-size: 16px;
 }
 
-main {
-    height: 110vh;
-}
+
 h1 {
     font-family: 'Courgette', cursive;
     color: #47555E;
@@ -38,6 +37,11 @@ h1 {
     padding: 20px;
 }
 
+main {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 300px;
+}
 .header {
     gap: 1rem;
     background-color: #47555E;
@@ -59,7 +63,7 @@ h1 {
     padding:10px;
     font-size:1.1rem;
     background:#47555E;
-    color:#EEEEEE;
+    color: #EEEEEE;
     }
 
     .navbar__links { 
@@ -68,8 +72,8 @@ h1 {
     .navbar__link { 
     padding:0 10px;
     }
-    .navbar__link > a { 
-    color:#EEEEEE;
+    .navbar__link > a:hover { 
+    color: #C69C6D;
     }
 
     @media screen and (max-width:767px) {
@@ -130,7 +134,7 @@ h1 {
         width:45px;
         height:4px;  
         border-radius:3px;
-        background:#EEEEEE; 
+        background: #EEEEEE; 
         transition: all .5s ease-in-out;   
     }
     .bar::before, .bar::after {
@@ -139,7 +143,7 @@ h1 {
         height:4px;
         position:absolute; 
         left:0;  
-        background:#EEEEEE; 
+        background: #EEEEEE;
         border-radius:3px;    
         transition: all .5s ease-in-out;
     }
@@ -169,6 +173,7 @@ h1 {
     flex-direction: column;
     justify-content: space-evenly;
     position: sticky;
+    height: 300px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -220,6 +225,9 @@ p .bi {
     font-family: 'Courgette', cursive;
 }
 /*---------- Specific : Gallery Iamge ---------*/
+.main__gallery {
+    min-height: 100%;
+}
 .galery__list {
     display: flex;
     justify-content: center;
@@ -233,6 +241,7 @@ p .bi {
     max-width: 250px;
     max-height: auto;
     display: none;
+
 }
 
 .active {
@@ -350,7 +359,7 @@ button:hover {
         margin-top: 5px;
         width: 0;
         height: 2px;
-        background: #EEEEEE;
+        background: #C69C6D;
         transition: width 0.2s ease-in-out;
     }
 
