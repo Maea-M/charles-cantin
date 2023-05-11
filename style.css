@@ -28,6 +28,9 @@ body {
     font-size: 16px;
 }
 
+main {
+    height: 110vh;
+}
 h1 {
     font-family: 'Courgette', cursive;
     color: #47555E;
@@ -162,17 +165,18 @@ h1 {
     color: #EEEEEE;
     background-color: #47555E;
     width: 100vw;
-    bottom: 0;
-    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    position: fixed;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .footer a {
     color: #EEEEEE;
+    font-size: 12px;
 }
 .footer a:hover {
     color: #C69C6D;
@@ -186,6 +190,15 @@ h1 {
 .copyright {
     align-self: center;
 }
+
+.bi{
+    font-size: 30px;
+}
+
+p .bi {
+    font-size: 16px;
+}
+
 /*---------- Specific : Home page ----------*/
 .main {
     display: flex;
@@ -214,6 +227,7 @@ h1 {
     flex-direction: column;
     gap: 20px;
     padding-bottom: 20px;
+    font-size: 0.8rem;
 }
 .galery__image {
     max-width: 250px;
@@ -235,7 +249,7 @@ button {
     border: #47555E solid 1px;
     padding: 5px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 20px;
 }
 
 button:hover {
@@ -264,22 +278,25 @@ button:hover {
 .form input {
     font-size: 1em;
     padding: 0.4rem;
-    width: 500px;
+    width: 300px;
     border-radius: 5px;
     border: 2px solid #47555E;
     color: #47555E;
     margin: 10px;
+    font-family: 'Nobile', sans-serif;
+
 }
 
 .form textarea {
     font-size: 1em;
     padding: 0.4rem;
-    width: 500px;
+    width: 300px;
     height: 250px;
     border-radius: 5px;
     border: 2px solid #47555E;
     color: #47555E;
     margin: 10px;
+    font-family: 'Nobile', sans-serif;
 }
 
 .coordonnees {
@@ -345,6 +362,15 @@ button:hover {
     .galery__list {
         flex-direction: row;
         flex-wrap: wrap;
+    }
+
+    /* form -*/
+    .form input {
+        width: 500px;
+    }
+
+    .form textarea {
+        width: 500px;
     }
 
 }
