@@ -13,7 +13,7 @@ console.log(images)
 
 // tableau avec tous les noms des images
 const noms = ['tout','mariage', 'bebe', 'grossesse', 'famille', 'couple', 'bapteme'];
-let number = 0;
+//let number = 0;
 onglets.forEach((onglet) => {
     onglet.addEventListener("click",()=>{
     console.log("clicked")
@@ -25,8 +25,8 @@ onglets.forEach((onglet) => {
 
         // initialiser un nombre à 0 que l'on va comparer à l'onglet clique via un data
         // car sinon ça ne déascative pas les autres
-        number = onglet.getAttribute('data-btn');
-        console.log(number)
+        let number = onglet.getAttribute('data-btn');
+        console.log(`valeur number: ${number}`)
         for (i=0; i< onglets.length; i++){
             if (onglets[i].getAttribute('data-btn') != number) {
                 onglets[i].classList.remove("active")
@@ -37,10 +37,10 @@ onglets.forEach((onglet) => {
     // si autre que 0, mettre par catégorie miage...
             for (j = 0 ; j < noms.length ; j++) {
                 if (j == number) {
-                    console.log(j)
+                    console.log(`valeur de :${j}`)
                     images.forEach((image) => {
                         if (image.classList.contains(noms[j]) || j === 0) {
-                            console.log(noms[j])
+                            console.log(`noms index:${noms[j]}`)
                             image.classList.add("active");
                     } else {
                             image.classList.remove("active");
