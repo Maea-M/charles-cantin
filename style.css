@@ -81,7 +81,7 @@ h1 {
             position:absolute;
             top:95px;
             left:0;     
-            background:transparent;     
+            background:#47555E;     
             transform: translateX(110%);
             transition: all .5s ease-in-out;
             z-index: 3;
@@ -120,7 +120,7 @@ h1 {
         width:45px;
         height:45px;
         border:none;
-        background:transparent;
+        background: transparent;
         cursor:pointer;
 
     }
