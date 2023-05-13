@@ -270,6 +270,15 @@ button:hover {
     border: #C69C6D solid 1px;
 }
 
+/*------------ Mentions légales ----------*/
+.mention__section {
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
 /*------------ Psecifc page conatct--------*/
 .form {
     display: flex;

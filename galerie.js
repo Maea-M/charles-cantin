@@ -1,22 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
     /* 
-1. Récupérer 
-les éléments à filter et les mettre dans les constantes
-*/
-console.log('hello world')
-const onglets = document.querySelectorAll('.category');
-console.log(onglets)
-// récupération d'un tableau de longueur 7
+    1. Récupérer 
+    les éléments à filter et les mettre dans les constantes
+    */
+    console.log('hello world')
+    const onglets = document.querySelectorAll('.category');
+    console.log(onglets)
+    // récupération d'un tableau de longueur 7
 
+    const images = document.querySelectorAll('.galery__image')
+    console.log(images)
+    // récupération d'un tableau de valeur 6
 
-const images = document.querySelectorAll('.galery__image')
-console.log(images)
-// récupération d'un tableau de valeur 6
-
-// tableau avec tous les noms des images
-const noms = ['tout','mariage', 'bebe', 'grossesse', 'famille', 'couple', 'bapteme'];
-//let number = 0;
-onglets.forEach((onglet) => {
+    // tableau avec tous les noms des images
+    const noms = ['tout','mariage', 'bebe', 'grossesse', 'famille', 'couple', 'bapteme'];
+    
+    onglets.forEach((onglet) => {
     onglet.addEventListener("click",()=>{
     console.log("clicked")
         if (onglet.classList.contains("active")) {
@@ -49,8 +48,8 @@ onglets.forEach((onglet) => {
                     }
                 })
             }
-}
-})
+        }
+    })
 });
 
 /*
