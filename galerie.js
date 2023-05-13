@@ -1,5 +1,7 @@
-/* 
-1. Récupérer les éléments à filter et les mettre dans les constantes
+document.addEventListener("DOMContentLoaded", function() {
+    /* 
+1. Récupérer 
+les éléments à filter et les mettre dans les constantes
 */
 console.log('hello world')
 const onglets = document.querySelectorAll('.category');
@@ -58,3 +60,5 @@ rajouter la galerie correspondante,
 retirer les autres
 tableau imbriqué 1er
 2ème tableau avec les images*/
+
+});
