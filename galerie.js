@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
     1. Récupérer 
     les éléments à filter et les mettre dans les constantes
     */
-    console.log('hello world')
     const onglets = document.querySelectorAll('.category');
     console.log(onglets)
     // récupération d'un tableau de longueur 7
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(images)
     // récupération d'un tableau de valeur 6
 
-    // tableau avec tous les noms des images
     const noms = ['tout','mariage', 'bebe', 'grossesse', 'famille', 'couple', 'bapteme'];
     
     onglets.forEach((onglet) => {
