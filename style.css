@@ -27,6 +27,7 @@ body {
     flex-direction: column;
     font-family: 'Nobile', sans-serif;
     font-size: 16px;
+    background-color: #EEEEEE;
 }
 
 
@@ -305,6 +306,7 @@ button:hover {
     border: 2px solid #47555E;
     color: #47555E;
     margin: 10px;
+    background-color: #EEEEEE;
     font-family: 'Nobile', sans-serif;
 
 }
@@ -316,6 +318,7 @@ button:hover {
     height: 250px;
     border-radius: 5px;
     border: 2px solid #47555E;
+    background-color: #EEEEEE;
     color: #47555E;
     margin: 10px;
     font-family: 'Nobile', sans-serif;
